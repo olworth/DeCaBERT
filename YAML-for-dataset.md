@@ -3,97 +3,97 @@ configs:
 - config_name: Abkhazian
   data_files:
   - split: train
-    path: "/abk/*.parquet"
+    path: abk/*
 - config_name: Ahka
   data_files: 
   - split: train
-    path: "/ahk/*.parquet"
+    path: ahk/*
 - config_name: Western Apache
   data_files: 
   - split: train
-    path: "/apw/*.parquet"
+    path: apw/*
 - config_name: Tibetan
   data_files: 
   - split: train
-    path: "/bod/*.parquet"
+    path: bod/*
 - config_name: Min Dong
   data_files: 
   - split: train
-    path: "/cdo/*.parquet"
+    path: cdo/*
 - config_name: Chechen
   data_files: 
   - split: train
-    path: "/che/*.parquet"
+    path: che/*
 - config_name: Siyin Chin
   data_files: 
   - split: train
-    path: "/csy/*.parquet"
+    path: csy/*
 - config_name: Dzhongkha
   data_files: 
   - split: train
-    path: "/dzo/*.parquet"
+    path: dzo/*
 - config_name: Basque
   data_files:
   - split: train
-    path: "/eus/*.parquet"
+    path: eus/*
 - config_name: Gan
   data_files: 
   - split: train
-    path: "/gan/*.parquet"
+    path: gan/*
 - config_name: Gwi'chin
   data_files: 
   - split: train
-    path: "/gwi/*.parquet"
+    path: gwi/*
 - config_name: Kachin
   data_files:
   - split: train
-    path: "/kac/*.parquet"
+    path: kac/*
 - config_name: Kabardian
   data_files:
   - split: train
-    path: "/kbd/*.parquet"
+    path: kbd/*
 - config_name: S'gaw Kare
   data_files:
   - split: train
-    path: "/ksw/*.parquet"
+    path: ksw/*
 - config_name: Lahu
   data_files:
   - split: train
-    path: "/lhu/*.parquet"
+    path: lhu/*
 - config_name: Lushai
   data_files:
   - split: train
-    path: "/lus/*.parquet"
+    path: lus/*
 - config_name: Burmese
   data_files:
   - split: train
-    path: "/mya/*.parquet"
+    path: mya/*
 - config_name: Min Nan
   data_files:
   - split: train
-    path: "/nan/*.parquet"
+    path: nan/*
 - config_name: Navajo
   data_files:
   - split: train
-    path: "/nav/*.parquet"
+    path: nav/*
 - config_name: Newari
   data_files:
   - split: train
-    path: "/new/*.parquet"
+    path: new/*
 - config_name: Sunwar
   data_files:
   - split: train
-    path: "/suz/*.parquet"
+    path: suz/*
 - config_name: Wu
   data_files:
   - split: train
-    path: "/wuu/*.parquet"
+    path: wuu/*
 - config_name: Yue
   data_files:
   - split: train
-    path: "/yue/*.parquet"
+    path: yue/*
 - config_name: Mandarin
   data_files:
   - split: train
-    path: "/zho/*.parquet"
+    path: zho/*
 ---
