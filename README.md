@@ -1,3 +1,3 @@
-# DeCaBERT: A Massively-Discredited Multilingual Language Model
+# DeCaBERT: A Massively-Discredited Multilingual Transformer
 
 Coming soon...
