@@ -121,13 +121,19 @@ def assemble_structure(ds_list, languages, repo_id, concatenate, keep_datasets):
         for index, ds in enumerate(ds_list):
             ds.to_parquet(f"{languages[index]}.parquet")
             api.upload_file(
-                path_or_fileobj=str(languages[index]+".parquet"),
+                path_or_fileobj=f"{languages[index]}.parquet",
                 path_in_repo=f"/{languages[index]}/{languages[index]}.parquet",
                 repo_id=repo_id,
                 repo_type="dataset",
             )
             if keep_datasets == False:
                 os.remove(f"{languages[index]}.parquet")
+        api.upload_file(
+                path_or_fileobj="YAML-for-dataset.md",
+                path_in_repo=f"/README.md",
+                repo_id=repo_id,
+                repo_type="dataset",
+            )
         return
 
 if __name__ == "__main__":
