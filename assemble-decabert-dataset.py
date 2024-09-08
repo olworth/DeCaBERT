@@ -9,7 +9,7 @@ from datasets import Dataset
 import requests
 import json
 from dataset_utils import (remove_whitespace, remove_longs, remove_start_numbers, shuffle_apply_percentage)
-from huggingface_hub import HfApi
+from huggingface_hub import (HfApi, create_repo)
 import re
 
 def download_preprocess_bible_dataset(language, url, percentage, seed, keep_datasets):
@@ -117,6 +117,7 @@ def assemble_structure(ds_list, languages, repo_id, concatenate, keep_datasets):
         ds_assembled.push_to_hub(repo_id)
         return
     else:
+        create_repo(repo_id, repo_type="dataset")
         api = HfApi()
         for index, ds in enumerate(ds_list):
             ds.to_parquet(f"{languages[index]}.parquet")
@@ -129,8 +130,8 @@ def assemble_structure(ds_list, languages, repo_id, concatenate, keep_datasets):
             if keep_datasets == False:
                 os.remove(f"{languages[index]}.parquet")
         api.upload_file(
-                path_or_fileobj="YAML-for-dataset.md",
-                path_in_repo=f"/README.md",
+                path_or_fileobj=f"{os.path.dirname(os.path.abspath(__file__))}/YAML-for-dataset.md",
+                path_in_repo="/README.md",
                 repo_id=repo_id,
                 repo_type="dataset",
             )
